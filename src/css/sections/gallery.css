@@ -1,0 +1,101 @@
+.gallery-section {
+    width: 100%;
+    padding-top: 6rem;
+}
+
+.gallery-section .gallery-section-header {
+    margin-bottom: 6rem;
+    text-align: center;
+    line-height: 90%;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: myFirstFont, sans-serif;
+    font-size: 6vw;
+    font-weight: 700;
+}
+
+.gallery-section .gallery-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 100rem;
+
+    display: grid;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+}
+
+.gallery-section .gallery-content .gallery-item {
+    position: relative;
+    border-radius: 0.5rem;
+}
+
+.gallery-section .gallery-content .gallery-item img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.gallery-section .gallery-content .gallery-item .gallery-item-text-block {
+    position: absolute;
+    top: auto;
+    bottom: 3rem;
+    left: 3rem;
+    right: 3rem;
+    z-index: 10;
+}
+
+.gallery-section .gallery-content .gallery-item .gallery-item-view-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    z-index: 11;
+
+    /* background-color: #36363656; */
+    width: 100px;
+    height: 100px;
+
+    -webkit-backdrop-filter: blur(1.5rem);
+    backdrop-filter: blur(1.5rem);
+    background-color: rgba(255,255,255, .07);
+    border: 1px solid rgba(255, 255, 255, 0.288);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 1.5px;
+    font-family: myFirstFont, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 140%;
+    transition: transform .5s ease 0s;
+
+    margin-top: -50px;
+    margin-left: -50px;
+    transform: scale(0);
+}
+
+.gallery-section .gallery-content .gallery-item .gallery-image-text-header {
+    letter-spacing: 2px;
+    font-family: myFirstFont, sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.gallery-image-text {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: myFirstFont, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 160%;
+}

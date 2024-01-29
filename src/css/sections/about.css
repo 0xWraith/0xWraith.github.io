@@ -1,0 +1,74 @@
+.about-section {
+
+}
+
+.about-section .about-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 100rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.about-header {
+    margin-bottom: 3rem;
+}
+
+.about-section .about-content .about-header .about-title {
+    text-transform: uppercase;
+    line-height: 90%;
+    font-size: 8rem;
+    letter-spacing: 4px;
+    font-weight: 700;
+    font-family: myFirstFont, sans-serif;
+}
+
+.about-section .about-content .about-text {
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 180%;
+    margin-bottom: 6rem;
+    /* font-family: myFirstFont, sans-serif; */
+}
+
+.about-section .about-content .user-image {
+    position: relative;
+    border-radius: 0.5rem;
+}
+
+.about-section .about-content .user-image img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.5rem;
+}
+
+.about-section .about-content .user-image-info {
+    position: absolute;
+    top: auto;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    z-index: 10;
+}
+
+.about-section .about-content .user-image-info .user-image-name {
+    letter-spacing: 2px;
+    font-family: myFirstFont, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 130%;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.about-section .about-content .user-image-info .user-image-position {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: myFirstFont, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 160%;
+}

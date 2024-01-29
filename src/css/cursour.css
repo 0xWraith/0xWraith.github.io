@@ -1,0 +1,43 @@
+.cursour-pointer {
+    z-index: -1;
+    transition: transform .15s;
+    position: fixed;
+    top: 0%;
+    bottom: auto;
+    left: 0%;
+    right: auto;
+}
+
+.cursour-pointer .cursour {
+    z-index: -1;
+    width: 300px;
+    height: 300px;
+    opacity: .3;
+    filter: blur(100px);
+    background-color: #3e4a61;
+    border-radius: 100%;
+    margin-top: -150px;
+    margin-left: -150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.limited-cursour-pointer {
+    z-index: -1;
+    /* transition: all .15s; */
+}
+
+.limited-cursour-pointer .cursour {
+    z-index: -1;
+    width: 300px;
+    height: 300px;
+    opacity: .3;
+    filter: blur(100px);
+    background-color: #2e64cf;
+    border-radius: 100%;
+    margin-top: -150px;
+    margin-left: -150px;
+    position: absolute;
+    transition: all 1.5s;
+}

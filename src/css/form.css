@@ -1,0 +1,44 @@
+.form-wrapper {
+    margin-bottom: 2rem;
+}
+
+.form-label {
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-family: myFirstFont,sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 160%;
+}
+
+input, textarea {
+    outline: none;
+    border: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-input {
+    min-height: 3rem;
+    color: #fff;
+    letter-spacing: .5px;
+    background-color: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 1rem 1.25rem;
+    font-family: myFirstFont, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 150%;
+    transition: background-color .2s, border .2s;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.form-input:focus {
+    border: 1px solid rgba(255, 255, 255, 0.767);
+}

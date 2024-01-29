@@ -1,0 +1,44 @@
+.lets-contact-section {
+
+}
+
+.lets-contact-section .lets-contact-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    /* background-color: antiquewhite; */
+    max-width: 50rem;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    text-align: center;
+}
+
+.lets-contact-text {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: myFirstFont, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 160%;
+    margin-bottom: 1rem;
+}
+
+.lets-contact-section .lets-contact-content .lets-contact-title-block {
+    margin-bottom: 2rem;
+}
+
+
+.lets-contact-title-block .lets-contact-title {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 90%;
+    font-family: myFirstFont, sans-serif;
+    font-weight: 700;
+    font-size: 8rem;
+}
+
+.lets-contact-section .lets-contact-content .button-transparent {
+    width: 15rem !important;
+    height: 3rem !important;
+    font-size: 0.75rem !important;
+}

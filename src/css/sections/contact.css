@@ -1,0 +1,31 @@
+.contact-section {
+
+}
+
+.contact-section .contact-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 87.5rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-section .contact-content .contact-text-block {
+    text-align: center;
+}
+
+.contact-section .contact-content .contact-form-block {
+    width: 30%;
+}
+
+.contact-section .contact-content .contact-form-block .button-transparent {
+    width: 100% !important;
+    height: 3rem;
+}
+
+.lets-contact-title-block {
+    margin-bottom: 4rem !important;
+}
