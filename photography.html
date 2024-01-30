@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
         <link rel="stylesheet" href="src/css/style.css">
         <link rel="stylesheet" href="src/css/buttons.css">
@@ -10,6 +11,7 @@
         <link rel="stylesheet" href="src/css/cursour.css">
         <link rel="stylesheet" href="src/css/sections/lets-contact.css">
         <link rel="stylesheet" href="src/css/sections/gallery.css">
+        <link rel="stylesheet" href="src/css/ambient-light.css">
         <!-- Favicon -->
         <link rel="icon" href="src/img/dzhuha.jpg" type="image/png">
     </head>
@@ -38,7 +40,10 @@
                     <div class="gallery-item-view-button">
                         <p class="gallery-item-view-button-text">View</p>
                     </div>
-                    <img src="src/img/1.jpg" alt="gallery-image" data-ambient>
+                    <div class="ambient-light">
+                        <img src="src/img/1.jpg" class="ambient-light-source" alt="gallery-image">
+                        <img src="src/img/1.jpg" class="ambient-light-shadow" alt="gallery-image">
+                    </div>
                     <div class="gallery-item-text-block">
                         <p class="gallery-image-text-header">Neo Noir</p>
                         <p class="gallery-image-text">Moody atmospheres</p>
@@ -48,7 +53,10 @@
                     <div class="gallery-item-view-button">
                         <p class="gallery-item-view-button-text">View</p>
                     </div>
-                    <img src="src/img/2.jpg" alt="gallery-image" data-ambient>
+                    <div class="ambient-light">
+                        <img src="src/img/2.jpg" class="ambient-light-source" alt="gallery-image">
+                        <img src="src/img/2.jpg" class="ambient-light-shadow" alt="gallery-image">
+                    </div>
                     <div class="gallery-item-text-block">
                         <p class="gallery-image-text-header">Neo Noir</p>
                         <p class="gallery-image-text text-muted">Moody atmospheres</p>
@@ -59,7 +67,10 @@
                     <div class="gallery-item-view-button">
                         <p class="gallery-item-view-button-text">View</p>
                     </div>
-                    <img src="src/img/3.jpg" alt="gallery-image" data-ambient>
+                    <div class="ambient-light">
+                        <img src="src/img/3.jpg" class="ambient-light-source" alt="gallery-image">
+                        <img src="src/img/3.jpg" class="ambient-light-shadow" alt="gallery-image">
+                    </div>
                     <div class="gallery-item-text-block">
                         <p class="gallery-image-text-header">Neo Noir</p>
                         <p class="gallery-image-text">Moody atmospheres</p>
@@ -69,7 +80,10 @@
                     <div class="gallery-item-view-button">
                         <p class="gallery-item-view-button-text">View</p>
                     </div>
-                    <img src="src/img/3.jpg" alt="gallery-image" data-ambient>
+                    <div class="ambient-light">
+                        <img src="src/img/3.jpg" class="ambient-light-source" alt="gallery-image">
+                        <img src="src/img/3.jpg" class="ambient-light-shadow" alt="gallery-image">
+                    </div>
                     <div class="gallery-item-text-block">
                         <p class="gallery-image-text-header">Neo Noir</p>
                         <p class="gallery-image-text text-muted">Moody atmospheres</p>
@@ -156,23 +170,11 @@
     <script src="src/js/ambient.min.js" type="text/javascript"></script>
 
     <script type="text/javascript">
-
-        var ambient = new Ambient();
-        ambient.mount();
-
-        let counter = 0;
-        
         document.addEventListener ('DOMContentLoaded', function () {
             var galleryItems = document.querySelectorAll ('.gallery-item');
-
             galleryItems.forEach (function (item) {
-
-                let ambientElement = ambient.elements[counter++];
                 var viewButton = item.querySelector ('.gallery-item-view-button');
                 var viewButtonText = item.querySelector ('.gallery-item-view-button-text');
-
-                ambientElement.disable();
-
 
                 item.addEventListener ('mouseenter', function () {
                     viewButton.style.transform = 'scale(1)';
@@ -182,12 +184,8 @@
                 });
 
                 item.addEventListener ('mouseleave', function () {
-                    // viewButton.style.top = '50%';
-                    // viewButton.style.left = '50%';
                     viewButton.style.transform = 'scale(0)';
                     viewButtonText.style.opacity = '0';
-
-                    ambientElement.disable();
                 });
 
                 item.addEventListener ('mousemove', function (e) {
@@ -233,6 +231,8 @@
 
                     viewButton.style.top = newY;
                     viewButton.style.left = newX;
+
+                    console.log('x: ' + x + ' y: ' + y);
 
                     // viewButton.style.transform = 'translate3d(' + x + 'px, ' + 50 + 'px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)';
                     // viewButton.style.willChange = 'transform';

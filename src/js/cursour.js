@@ -4,7 +4,7 @@ var footerElement = document.getElementById('footer');
 
 let delay = 0;
 
-document.addEventListener('mousemove', function(e){
+document.addEventListener('mousemove', (e) => {
 
     var footerElementPosition = footerElement.getBoundingClientRect();
 
