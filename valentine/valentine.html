@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Valentine</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container" id="container">
+        <img src="doggo_flower.png" id="rizz_doggo">
+        <h1 id="header">Hey beautiful</h1>
+        <h3 id="subheader">Will you be my valentine?</h3>
+        <div class="buttons">
+            <button id="no_btn" onclick="no()">No</button>
+            <button id="yes_btn" onclick="yes()">Yes</button>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var rizz_doggo = document.getElementById('rizz_doggo');
+    var header = document.getElementById('header');
+    var subheader = document.getElementById('subheader');
+
+    var no_btn = document.getElementById('no_btn');
+    var yes_btn = document.getElementById('yes_btn');
+
+    var container = document.getElementById('container');
+
+    var maxOffset = 300;
+
+    if (window.innerWidth < 500) {
+        maxOffset = 100;
+    }
+
+
+    function no() {
+
+        let randomTranslateX = Math.floor(Math.random() * maxOffset);
+        let randomTranslateY = Math.floor(Math.random() * maxOffset);
+
+        if (randomTranslateX % 2 == 0) {
+            randomTranslateX = randomTranslateX * -1;
+        }
+
+        if (randomTranslateY % 2 == 0) {
+            randomTranslateY = randomTranslateY * -1;
+        }
+
+        console.log(randomTranslateX, randomTranslateY);
+
+        rizz_doggo.src = 'doggo_gun.png';
+        header.style.display = 'none';
+        subheader.innerHTML = 'The no button is just for visuals babygirl';
+        no_btn.style.transform = 'translateX(' + randomTranslateX + 'px) translateY(' + randomTranslateY + 'px)';
+    }
+
+    function yes() {
+        rizz_doggo.src = 'doggo_love.png';
+
+        no_btn.style.display = 'none';
+        yes_btn.style.display = 'none';
+
+        header.innerHTML = 'Yeeeees!';
+        subheader.innerHTML = 'Looooove uuu, see you soon babygirl <3';
+
+    }
+</script>
+</html>

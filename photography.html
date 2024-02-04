@@ -171,6 +171,15 @@
 
     <script type="text/javascript">
         document.addEventListener ('DOMContentLoaded', function () {
+
+            var ambientLightItems = document.querySelectorAll ('.ambient-light-shadow');
+            ambientLightItems.forEach (function (item) {
+                item.addEventListener ('mouseenter', function () {
+                    item.classList.add ('active');
+                });
+            });
+            
+
             var galleryItems = document.querySelectorAll ('.gallery-item');
             galleryItems.forEach (function (item) {
                 var viewButton = item.querySelector ('.gallery-item-view-button');
